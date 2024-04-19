@@ -259,7 +259,7 @@ def get_concurrent_response(prompt:str, responses:List[str], completions:List[st
             temperature=temperature,
             top_p=1,
             frequency_penalty=0,
-            presence_penalty=-1
+            presence_penalty=0
         )
     with lock:
         original_response = completions[seq].choices[0].message.content
